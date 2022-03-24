@@ -1,25 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Footer from './Components/Footer';
+import OurClients from './Components/OurClients';
+import About from './Components/About';
+import SmartClass from './Components/SmartClass';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div>
+      <BrowserRouter>
+        <Routes>
+        <Route exact path='/scr' element={<SmartClass/>}/>
+          <Route exact path='/' element={<Footer/>}/>
+          <Route exact path='/1' element={<OurClients/>}/>
+          <Route exact path='/2' element={<About/>}/>
+        </Routes>
+      </BrowserRouter>
+      </div>
+
+    );
 }
 
 export default App;
