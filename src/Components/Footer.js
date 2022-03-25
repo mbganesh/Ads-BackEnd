@@ -19,14 +19,6 @@ import ic_youtube from "../img/socialmedia_icon/ic_y.svg";
 import ic_wa from "../img/socialmedia_icon/ic_w.svg";
 import { useNavigate } from "react-router-dom";
 
-const ColoredLine = ({ color }) => (
-  <hr
-    style={{
-      height: 1,
-      width: "60%",
-    }}
-  />
-);
 
 const MainContainer = styled("div")(({ theme }) => ({
   display: "flex",

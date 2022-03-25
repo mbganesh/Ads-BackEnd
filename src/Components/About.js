@@ -1,3 +1,7 @@
+import Ban from "../img/Ban.svg";
+// import BannerSVG from "../img/Banner.svg";
+
+
 import { Icon, Typography } from "@mui/material";
 import React, { Fragment } from "react";
 import background from "../img/3.jpg";
@@ -10,7 +14,6 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
 import { styled } from "@mui/material/styles";
 import Footer from "./Footer";
-
 
 const subDiv = styled("div")(({ theme }) => ({
   display: "flex",
@@ -27,37 +30,45 @@ const subDiv = styled("div")(({ theme }) => ({
   },
 }));
 
-const SubDiv2 = styled('div')(({theme})=> ({
-    display: "flex",
-    justifyContent: "space-between",
-    marginTop: "15vh",
-    [theme.breakpoints.down("md")]: {
-        flexDirection:'column'
-      },
-}))
+const SubDiv2 = styled("div")(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-between",
+  marginTop: "15vh",
+  [theme.breakpoints.down("md")]: {
+    flexDirection: "column",
+  },
+}));
 
-const SubDiv2A = styled('div')(({theme})=> ({
-    width: "48%",
-    [theme.breakpoints.down("md")]: {
-        width: "95%"
-      },
-}))
-
-
-
+const SubDiv2A = styled("div")(({ theme }) => ({
+  width: "48%",
+  [theme.breakpoints.down("md")]: {
+    width: "95%",
+  },
+}));
 
 function About() {
   return (
-
-     <div style={{width:'100%' , height:'50%'}}>
-
-     <iframe src="https://www.google.com/maps/d/embed?mid=1HMPyg1aNySptTAs_VL5Iz2gyXoBUOa3p&ehbc=2E312F" height="500px" style={{width:'100%' }} />
-
-
-    <Footer/>
-
-     </div>
+    <>
+      <div style={{ width: "99%", height: "50%" }}>
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=1HMPyg1aNySptTAs_VL5Iz2gyXoBUOa3p&ehbc=2E312F"
+          height="500px"
+          width="100%"
+        />
+      </div>
+{/* 
+      <div
+        style={{
+          width:'100%',
+        }}
+     >
+       <img src={Ban} style={{objectFit:'cover'}} />
      
+       </div> */}
+
+
+
+    </>
   );
 }
 
